@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="js/greeting.js" defer></script>
+    <script src="js/weather.js" defer></script>
+    <script src="js/moveBtn.js" defer></script>
+    <script src="js/calendar.js" defer></script>
+    <script src="js/clock.js" defer></script>
+    <script src="js/quotes.js" defer></script>
+    <script src="js/todo.js" defer></script>
+    <title>ChromeApp_Ahn</title>
+</head>
+<body>
+    <div class="warp">
+        <div id="mainController" class="mainPage">
+            <div id="headContainer" class="hidden headContainer">
+                <p id="greeting" class="introduce"></p>
+                <div id="weather" class="hidden weather">
+                    <p id="weatherControl" class="weatherControl"></p>
+                </div>
+            </div>
+            <div id="calendarHeader" class="hidden nowTime">
+                <button id="clock" class="clockStatus">00:00:00</button><br>
+                <button id="calStatus" class="calStatus">2021년 7월 6일</button>
+            </div>
+            <table id="calendar" class="hidden calendar">
+                <tr class="calHeader">
+                    <td></td>
+                    <td><button id="calPrev" class="calBtn"><</button></td>
+                    <td colspan="3"><button class="calToday"></button></td>
+                    <td><button id="calNext" class="calBtn">></button></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="calSquare calSun">Sun</td>
+                    <td class="calSquare">Mon</td>
+                    <td class="calSquare">Tue</td>
+                    <td class="calSquare">Wed</td>
+                    <td class="calSquare">Thu</td>
+                    <td class="calSquare">Fri</td>
+                    <td class="calSquare calSat">Sat</td>
+                </tr>
+            </table>
+            <div id="footer" class="hidden footer">
+                <button id="arrowBtnDown" class="arrowBtn arrowBtnDown">↓</button>
+            </div>
+            <form id="loginForm" class="hidden">
+                <div class="subject">
+                    <span class="subjectText">Seize the Day</span>
+                </div>
+                <input type="text" id="inputName" class="controlName" placeholder="Please Write Your Name">
+            </form>
+        </div>
+        <div id="subController" class="subPage hidden">
+            <div id="subPageHeader" class="subPageHeader">
+                <div id="subHeadLeft" class="subHeadLeft">
+                    <button id="subClock" class="clockStatus">00:00:00</button><br>
+                    <button id="subCalStatus" class="calStatus">2021년 7월 6일</button>
+                </div>
+                <div id="subHeadRight" class="subHeadRight">
+                    <p id="subWeatherControl" class="weatherControl"></p>
+                </div>
+            </div>
+            <div id="quotes" class="quotes">
+                <span class="quote"></span><br>
+                <span class="author"></span>
+            </div>
+            <div id="todoForm" class="todoForm">
+                <div class="todayTodo todoLocation">
+                    <form id="todayTodoList" class="todayTodoList">
+                        <p class="todoSubject">Write a day list</p>
+                        <input type="text" class="todoInput" placeholder="Write a To Do and Press Enter">
+                    </form>
+                        <ul id="todoDayList" class="todoDayList todoList"></ul>
+                </div>
+                <div class="weekTodo todoLocation">
+                    <form id="weekTodoList" class="weekTodoList">
+                        <p class="todoSubject">Write a week list</p>
+                        <input type="text" class="todoInput" placeholder="Write a To Do and Press Enter">
+                    </form>
+                        <ul id="todoWeekList" class="todoWeekList todoList"></ul>
+                </div>
+
+            </div>
+            <button id="arrowBtnUp" class="arrowBtn arrowBtnUp subArrow">↑</button>
+        </div>
+    </div>
+</body>
+</html>

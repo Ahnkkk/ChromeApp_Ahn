@@ -1,0 +1,336 @@
+:root{
+    /* size */
+    --background-hSize:937px;
+    --background-wSize:1920px;
+
+    /* animation */
+    --transition-delay:300ms;
+
+    /* color */
+    --base-color: white;
+    --text-color: black;
+}
+.warp{
+    width: 100%;
+    height: 100%;
+}
+.mainPage{
+    width: 100%;
+    height: var(--background-hSize);
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-size: var(--background-wSize) var(--background-hSize);
+    background-image: url("../img/milkyway4.jpg");
+    opacity: 0.95;
+    overflow: hidden;
+}
+.subPage{
+    width: 100%;
+    height: var(--background-hSize);
+    background-repeat:no-repeat;
+    background-position: center center;
+    background-size: var(--background-wSize) var(--background-hSize);
+    background-image: url("../img/milkyway6.jpg");
+    opacity: 0.95;
+    overflow: hidden;
+}
+.controlName{
+    width: 500px;
+    height: 40px;
+    outline: none;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 35%;
+    margin-top: 18%;
+    text-align: center;
+    transition: var(--transition-delay) ease;
+    color: var(--base-color);
+}
+.controlName::placeholder{
+    color: var(--base-color);
+    font-style: italic;
+    font-weight: bold;
+}
+.controlName:hover{
+    transform: scale(1.2);
+}
+.hidden{
+    display: none;
+}
+.subject{
+    display: flex;
+}
+.subjectText{
+    width: 1000px;
+    height: 100px;
+    color: var(--base-color);
+    font-size: 85px;
+    font-weight: bold;
+    margin-left: 33%;
+    font-style: italic;
+    padding-top: 50px;
+    letter-spacing: 3px;
+}
+.headContainer{
+    display: flex;
+    width: 100%;
+    text-align: left;
+    margin-left: 60px;
+    padding-top: 50px;
+}
+.introduce{
+    cursor: pointer;
+    font-family: neon;
+    color: var(--base-color);
+    font-size: 2vw;
+    position: absolute;
+    line-height: 2vw;
+    text-shadow: 0 0 3vw var(--base-color);;
+    animation: neon 1s ease infinite;
+    -moz-animation: neon 1s ease infinite;
+    -webkit-animation: neon 1s ease infinite;
+}
+@keyframes neon {
+    0%,
+    100% {
+        text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF,
+        0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+        color: #b9eeee;
+    }
+    50% {
+        text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180,
+        0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
+        color: #03e9f4;
+    }
+}
+@font-face {
+    font-family: neon;
+    src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
+}
+.weather{
+    text-align: left;
+    display: flex;
+    color: white;
+    padding-left: 76%;
+}
+.weatherControl{
+    cursor: pointer;
+    padding-top: 10px;
+    margin-left: 25px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+img{
+    width: 80px;
+}
+.arrowBtn{
+    width: 50px;
+    height: 50px;
+    border: 2px solid #03e9f4;
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #03e9f4;
+    font-size: 30px;
+    font-weight: bold;
+    outline: 0;
+    transition: var(--transition-delay) ease;
+}
+.arrowBtnDown{
+    margin-left: 50%;
+}
+.arrowBtnUp{
+    margin-left: 50%;
+}
+.arrowBtn:hover{
+    background: #03e9f4;
+    color: #fff;
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
+
+}
+.arrowBtn:active{
+    transform: scale(0.95);
+}
+.nowTime{
+    margin-top: 10px;
+    margin-left: 25%;
+    margin-bottom: 10px;
+    width: 300px;
+}
+.calStatus{
+    outline: none;
+    border: none;
+    font-size: 20px;
+    color: var(--base-color);
+    background-color: transparent;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.calStatus:hover{
+    background: #03e9f4;
+    color: #fff;
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+    0 0 100px #03e9f4;
+}
+.calStatus:active{
+    transform: scale(0.97);
+}
+.calendar{
+    margin-left: 23%;
+    width: 1000px;
+    height: 600px;
+    text-align: center;
+    padding-top: 40%;
+    font-size: 22px;
+    color: var(--base-color);
+}
+.calToday{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: var(--base-color);
+    text-align: center;
+    font-size: 22px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+.calHeader{
+    height: 100px;
+}
+.calSquare{
+    width: 125px;
+    height: 70px;
+    font-size: 22px;
+    color: var(--base-color);
+    font-weight: bold;
+}
+.calSun{
+    color: firebrick;
+}
+.calSat{
+    color: #03e9f4;
+}
+.calBtn{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: var(--base-color);
+    font-size: 22px;
+    transition: var(--transition-delay) ease;
+    font-weight: bold;
+    cursor: pointer;
+}
+.calBtn:hover{
+    transform: scale(1.2);
+}
+.calBtn:active{
+    transform: scale(1);
+}
+.clockStatus{
+    margin-bottom: 10px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--base-color);
+    -webkit-text-stroke: 3px black;
+}
+.subPageHeader{
+    display: flex;
+}
+.subHeadLeft{
+    margin-left: 60px;
+    padding-top: 50px;
+}
+.subHeadRight{
+    display: flex;
+    margin-left: 65%;
+    padding-top: 50px;
+    color: white;
+}
+.quotes{
+    text-align: center;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+}
+.quote{
+    cursor: pointer;
+}
+.author{
+    cursor: pointer;
+    font-size: 25px;
+}
+.todoForm{
+    display: flex;
+    margin-left: 20%;
+    margin-top: 50px;
+}
+.todoLocation{
+    width: 550px;
+    height: 550px;
+
+    text-align: center;
+}
+.weekTodo{
+    margin-left: 30px;
+}
+.todoSubject{
+    font-size: 35px;
+    color: white;
+    text-shadow: 0 0 3vw var(--base-color);;
+    animation: neon 1s ease infinite;
+    -moz-animation: neon 1s ease infinite;
+    -webkit-animation: neon 1s ease infinite;
+    letter-spacing: 2px;
+}
+.todoInput{
+    width: 400px;
+    height: 30px;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    color: white;
+    outline: none;
+    background: transparent;
+    transition: var(--transition-delay) ease;
+    letter-spacing: 1px;
+}
+.todoInput::placeholder{
+    color: var(--base-color);
+}
+.todoInput:focus{
+    border: 2px solid white;
+    transform: scale(1.1);
+}
+.todoList{
+    text-align: left;
+    margin-top: 10px;
+    padding-left: 13%;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--base-color);
+}
+.subArrow{
+    margin-top: 40px;
+}
+.deleteBtn{
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 5%;
+    background: transparent;
+    border: none;
+    color: firebrick;
+    transition: var(--transition-delay) ease;
+}
+.deleteBtn:hover{
+    transform: scale(1.5);
+}
+.deleteBtn:active{
+    transform: scale(1.3);
+}
